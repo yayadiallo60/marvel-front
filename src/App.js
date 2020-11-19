@@ -13,6 +13,9 @@ const App = () => {
           <Route path="/characters">
             <Main />
           </Route>
+          <Route path="/character/:id">
+            <Main />
+          </Route>
         </Switch>
       </Router>
       <Main />

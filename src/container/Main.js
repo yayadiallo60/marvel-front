@@ -25,11 +25,7 @@ const Main = () => {
     <div className="main-container">
       <div className="main-cards">
         {data.results.map((character, index) => {
-          return (
-            <Link>
-              <Card character={character} index={index} />
-            </Link>
-          );
+          return <Card character={character} index={index} />;
         })}
       </div>
     </div>
