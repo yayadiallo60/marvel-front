@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
-import { Link } from "react-router-dom";
+
 const Main = () => {
   //   return <div>Hello World</div>;
   const [data, setData] = useState();
