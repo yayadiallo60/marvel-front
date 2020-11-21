@@ -1,11 +1,23 @@
 /* Header */
 .header {
-  height: 50px;
-  background-color: green;
+  height: 80px;
+  border: 1px solid red;
   margin-bottom: 20px;
 }
+.header-container {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoMarvel {
+  width: 150px;
+  height: 50px;
+}
 
-/* CHARACTER*/
+/* CHARACTERS*/
 
 .main-container {
   width: 80%;
@@ -28,4 +40,74 @@
 .card-name {
   display: flex;
   justify-content: center;
+}
+
+/* CHARACTER DETAIL */
+
+.character-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.character {
+  display: flex;
+  height: 520px;
+}
+
+.character-img {
+  width: 500px;
+  height: 520px;
+  margin-right: 20px;
+}
+
+.character-details-col2-row1 {
+  height: 50%;
+}
+
+.character-name {
+  margin: 0;
+}
+
+.characterComics {
+  display: flex;
+
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.characterComics-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* COMICS */
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comics-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.comics-card {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px 0;
+}
+
+.comic-img {
+  width: 250px;
+  height: 350px;
+}
+.comics-title {
+  width: 250px;
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Comics from "../components/Comics";
+import CharacterComics from "../components/CharacterComics";
 
 const Character = () => {
   const params = useParams();
@@ -17,31 +17,34 @@ const Character = () => {
         );
         setData(response.data.data);
         setIsLoading(false);
-        // console.log(response.data.data);
       } catch (error) {
         console.log(error.message);
       }
     };
     fetchData();
   }, [id]);
-  // console.log(data.results);
 
   return isLoading ? (
     <div>Chargement en cours...</div>
   ) : (
-    // <div>coucou</div>
-    <div>
+    <div className="character-container">
       {data.results.map((character, index) => {
         return (
-          <div className="character-detail" key={index}>
+          <div className="character" key={index}>
             <img
+              className="character-img"
               src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
               alt={character.name}
             />
-            <h2>{character.name}</h2>
-            <p>{character.description}</p>
-            <div className="comics">
-              <Comics id={character.id} />
+            <div className="character-details-col2">
+              <div className="character-details-col2-row1">
+                <h2 className="character-name">{character.name}</h2>
+                <p className="character.description">{character.description}</p>
+              </div>
+
+              <div>
+                <CharacterComics id={character.id} />
+              </div>
             </div>
           </div>
         );
