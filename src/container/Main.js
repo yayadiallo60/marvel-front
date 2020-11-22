@@ -15,7 +15,7 @@ const Main = () => {
       try {
         // https://marvel-back-yaya.herokuapp.com
         const response = await axios.get(
-          `http://localhost:3001/characters?offset=${offset}`
+          `https://marvel-back-yaya.herokuapp.com/characters?offset=${offset}`
         );
         setData(response.data);
         setIsLoading(false);
