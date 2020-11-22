@@ -9,19 +9,21 @@ const Header = () => {
           <img className="logoMarvel" src={logoMarvel} alt="logoMarvel" />
         </Link>
 
-        <nav>
+        <nav className="navbar">
           <Link to="/characters">
-            <span>Characters</span>
+            <span className="navbar-item">CHARACTERS</span>
           </Link>
-          <Link to="comics">
-            <span>Comics</span>
+          <Link to="/comics">
+            <span className="navbar-item">COMICS</span>
           </Link>
-          <Link to="favories">
-            <span>Favories</span>
+          <Link to="/favories">
+            <span className="navbar-item">MY FAV</span>
           </Link>
         </nav>
         <div className="login">
-          <button type="submit">login</button>
+          <button className="loginBtn" type="submit">
+            login
+          </button>
         </div>
       </div>
     </div>

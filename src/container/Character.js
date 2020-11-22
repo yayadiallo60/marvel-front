@@ -41,8 +41,8 @@ const Character = () => {
                 <h2 className="character-name">{character.name}</h2>
                 <p className="character.description">{character.description}</p>
               </div>
-
-              <div>
+              <div className="slider">
+                <h2 className="characterComics-title">Comic(s)</h2>
                 <CharacterComics id={character.id} />
               </div>
             </div>

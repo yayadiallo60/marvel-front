@@ -9,7 +9,7 @@ const CharacterComics = ({ id }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:3001/character-comics/?id=${id}`
+        `https://marvel-back-yaya.herokuapp.com/character-comics/?id=${id}`
       );
 
       setdata(response.data);
@@ -20,7 +20,7 @@ const CharacterComics = ({ id }) => {
   }, [id]);
   // console.log("data ===>", data);
   return isLoading ? (
-    <div>Encours de chargement...</div>
+    <div>En cours de chargement...</div>
   ) : (
     <div className="characterComics">
       {data.results.map((comic, index) => {
