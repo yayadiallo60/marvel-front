@@ -25,7 +25,7 @@ const Character = () => {
   }, [id]);
 
   return isLoading ? (
-    <div>Chargement en cours...</div>
+    <div className="chargement">Chargement en cours...</div>
   ) : (
     <div className="character-container">
       {data.results.map((character, index) => {

@@ -8,6 +8,11 @@ body {
   background-image: url("./images/background.cbd090c1.gif");
   font-family: "Oswald", sans-serif;
 }
+
+.chargement {
+  color: white;
+  font-size: 30px;
+}
 /* Header */
 .header {
   height: 80px;

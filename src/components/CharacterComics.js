@@ -20,7 +20,7 @@ const CharacterComics = ({ id }) => {
   }, [id]);
   // console.log("data ===>", data);
   return isLoading ? (
-    <div>En cours de chargement...</div>
+    <div className="chargement">En cours de chargement...</div>
   ) : (
     <div className="characterComics">
       {data.results.map((comic, index) => {

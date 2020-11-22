@@ -25,7 +25,7 @@ const Comics = () => {
   }, [offset]);
 
   return isLoading ? (
-    <div>Encours de chargement...</div>
+    <div className="chargement">Encours de chargement...</div>
   ) : (
     <div className="comics">
       <div className="comics-container">

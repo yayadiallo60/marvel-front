@@ -27,7 +27,7 @@ const Main = () => {
     fetchData();
   }, [offset]);
   return isLoading ? (
-    <div>En cours de chargement...</div>
+    <div className="chargement">En cours de chargement...</div>
   ) : (
     <div className="main-container">
       <div className="main-cards">
