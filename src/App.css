@@ -13,6 +13,10 @@ body {
   color: white;
   font-size: 30px;
 }
+.loader {
+  margin: 0 auto;
+  align-items: center;
+}
 /* Header */
 .header {
   height: 80px;

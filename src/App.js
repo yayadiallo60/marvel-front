@@ -36,6 +36,9 @@ const App = () => {
         <Route path="/character/:id">
           <Character />
         </Route>
+        <Route path="/">
+          <Main />
+        </Route>
       </Switch>
     </div>
   );

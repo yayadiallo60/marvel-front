@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import CharacterComics from "../components/CharacterComics";
 
 const Character = () => {
@@ -25,7 +26,14 @@ const Character = () => {
   }, [id]);
 
   return isLoading ? (
-    <div className="chargement">Chargement en cours...</div>
+    <Loader
+      className="loader"
+      type="TailSpin"
+      color="#ff0000"
+      height={300}
+      width={300}
+      timeout={10000}
+    />
   ) : (
     <div className="character-container">
       {data.results.map((character, index) => {

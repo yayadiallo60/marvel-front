@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Comics = () => {
@@ -25,7 +26,14 @@ const Comics = () => {
   }, [offset]);
 
   return isLoading ? (
-    <div className="chargement">Encours de chargement...</div>
+    <Loader
+      className="loader"
+      type="TailSpin"
+      color="#ff0000"
+      height={300}
+      width={300}
+      timeout={10000}
+    />
   ) : (
     <div className="comics">
       <div className="comics-container">

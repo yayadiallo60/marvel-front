@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 const CharacterComics = ({ id }) => {
   const [data, setdata] = useState();
@@ -20,7 +21,14 @@ const CharacterComics = ({ id }) => {
   }, [id]);
   // console.log("data ===>", data);
   return isLoading ? (
-    <div className="chargement">En cours de chargement...</div>
+    <Loader
+      className="loader"
+      type="TailSpin"
+      color="#ff0000"
+      height={300}
+      width={300}
+      timeout={10000}
+    />
   ) : (
     <div className="characterComics">
       {data.results.map((comic, index) => {

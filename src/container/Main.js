@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
+import Loader from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Main = () => {
@@ -18,7 +19,7 @@ const Main = () => {
           `https://marvel-back-yaya.herokuapp.com/characters?offset=${offset}`
         );
         setData(response.data);
-        setIsLoading(false);
+        setIsLoading(true);
         // console.log(response.data);
       } catch (error) {
         console.log(error.message);
@@ -27,7 +28,14 @@ const Main = () => {
     fetchData();
   }, [offset]);
   return isLoading ? (
-    <div className="chargement">En cours de chargement...</div>
+    <Loader
+      className="loader"
+      type="TailSpin"
+      color="#ff0000"
+      height={300}
+      width={300}
+      timeout={10000}
+    />
   ) : (
     <div className="main-container">
       <div className="main-cards">
