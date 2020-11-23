@@ -19,7 +19,7 @@ const Main = () => {
           `https://marvel-back-yaya.herokuapp.com/characters?offset=${offset}`
         );
         setData(response.data);
-        setIsLoading(true);
+        setIsLoading(false);
         // console.log(response.data);
       } catch (error) {
         console.log(error.message);
